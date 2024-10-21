@@ -2,10 +2,9 @@
 # taken from https://www.nextflow.io/docs/latest/cache-and-resume.html#comparing-the-hashes-of-two-runs
 
 readonly pipeline="${1}"
-readonly run_2_config="${2}"
 
 nextflow -log run_1.log run "${pipeline}" -dump-hashes json
-nextflow -config "${run_2_config}" -log run_2.log run "${pipeline}" -dump-hashes json -resume
+nextflow -config ext_args.config -log run_2.log run "${pipeline}" -dump-hashes json -resume
 
 get_hashes() {
     cat $1 \
