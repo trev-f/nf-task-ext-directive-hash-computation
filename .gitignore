@@ -1,0 +1,6 @@
+/.nextflow
+/work
+/.nextflow.log*
+/run_1.log*
+/run_2.log*
+*_task_hashes.txt
