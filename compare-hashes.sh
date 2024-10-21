@@ -22,5 +22,5 @@ get_hashes() {
 get_hashes run_1.log > run_1_task_hashes.txt
 get_hashes run_2.log > run_2_task_hashes.txt
 
-echo "Diff:"
+echo "Task hash diff:"
 diff run_1_task_hashes.txt run_2_task_hashes.txt
